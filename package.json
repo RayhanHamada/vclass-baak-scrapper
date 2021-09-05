@@ -1,10 +1,11 @@
 {
   "name": "vclass-baak-scrapper",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Scrapper for BAAK and V-Class",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:getJadwalKelas": "swcno src/baak/getJadwalKelas.test.ts",
+    "test:getJurusanUU": "swcno src/baak/getJurusanUU.test.ts",
+    "test:getJadwalUU": "swcno src/baak/getJadwalUU.test.ts"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,11 @@
   "devDependencies": {
     "@types/node": "^16.7.10",
     "swcno": "^0.1.1",
+    "ts-node": "^10.2.1",
+    "tslib": "^2.3.1",
     "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "puppeteer": "^10.2.0"
   }
 }
