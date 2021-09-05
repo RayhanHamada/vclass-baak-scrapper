@@ -1,0 +1,25 @@
+{
+  "name": "vclass-baak-scrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayhanHamada/vclass-baak-scrapper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RayhanHamada/vclass-baak-scrapper/issues"
+  },
+  "homepage": "https://github.com/RayhanHamada/vclass-baak-scrapper#readme",
+  "devDependencies": {
+    "@types/node": "^16.7.10",
+    "swcno": "^0.1.1",
+    "typescript": "^4.4.2"
+  }
+}
