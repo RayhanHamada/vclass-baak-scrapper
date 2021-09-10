@@ -1,6 +1,6 @@
-import { getJadwalKelas } from './getJadwalKelas';
+import { getJadwalKelasBase64 } from './getJadwalKelas';
 
-getJadwalKelas('3IA12').then((buffer) => {
-  console.log(buffer.toString('base64'));
+getJadwalKelasBase64('3IA12').then((str) => {
+  console.log(str);
   process.exit(0);
 });
