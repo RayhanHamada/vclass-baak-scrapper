@@ -1,5 +1,5 @@
-import { getJadwalUU } from './getJadwalUU';
+import { getJadwalUUBase64 } from './getJadwalUU';
 
-getJadwalUU('S1-TEKNIK INFORMATIKA (KAMPUS KELAPA DUA)').then((buffer) => {
-  console.log(buffer.toString('base64'));
+getJadwalUUBase64('S1-TEKNIK INFORMATIKA (KAMPUS KELAPA DUA)').then((str) => {
+  console.log(str);
 });

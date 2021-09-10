@@ -1,6 +1,6 @@
 import p from 'puppeteer';
 
-export async function getJadwalUU(jurusan: string) {
+export async function getJadwalUUBase64(jurusan: string) {
   const bsr = await p.launch({ headless: true });
   const page = (await bsr.pages())[0];
 
@@ -12,6 +12,9 @@ export async function getJadwalUU(jurusan: string) {
     'body > div > main > section:nth-child(3) > div > div'
   );
 
+  if (!content) return undefined;
+
   const ss = (await content?.screenshot()) as Buffer;
-  return ss;
+
+  return ss.toString('base64');
 }
