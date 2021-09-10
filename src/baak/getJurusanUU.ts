@@ -8,16 +8,20 @@ export async function getJurusanUU() {
 
   await page.click('#formCari > div > span > span.selection > span');
 
-  const jurusans = await page.evaluate(() => {
-    const els = document.querySelectorAll('li.select2-results__option');
+  const jurusans = await page
+    .evaluate(() => {
+      const els = document.querySelectorAll('li.select2-results__option');
 
-    let j: string[] = [];
-    els.forEach((e) => {
-      j.push(e.textContent as string);
+      let j: string[] = [];
+      els.forEach((e) => {
+        j.push(e.textContent as string);
+      });
+
+      return j.splice(1);
+    })
+    .catch(() => {
+      return [] as string[];
     });
-
-    return j.splice(1);
-  });
 
   return jurusans;
 }
